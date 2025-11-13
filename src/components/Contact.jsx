@@ -23,16 +23,19 @@ const Contact = () => {
     setStatus({ type: '', message: '' })
 
     try {
-      // Send email using EmailJS
+      // Send email using EmailJS with correct template variables
+      const templateParams = {
+        to_name: 'Shehrooz',
+        from_name: formData.name,
+        from_email: formData.email,
+        message: formData.message,
+        reply_to: formData.email
+      }
+
       await emailjs.send(
         'service_027xnfi',
         'template_rn9k5yd',
-        {
-          from_name: formData.name,
-          from_email: formData.email,
-          message: formData.message,
-          to_name: 'Shehrooz'
-        }
+        templateParams
       )
       
       setStatus({ 
@@ -42,9 +45,10 @@ const Contact = () => {
       setFormData({ name: '', email: '', message: '' })
     } catch (error) {
       console.error('EmailJS Error:', error)
+      const errorMessage = error?.text || error?.message || 'Unknown error'
       setStatus({ 
         type: 'error', 
-        message: 'Failed to send message. Please email directly: shehroozking3@gmail.com' 
+        message: `Failed to send: ${errorMessage}. Please email: shehroozking3@gmail.com` 
       })
     } finally {
       setLoading(false)
