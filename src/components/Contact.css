@@ -8,11 +8,20 @@
   margin: 0 auto;
 }
 
-.contact-content {
-  display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: 60px;
-  align-items: start;
+.contact-methods-centered {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-description {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #D9D9D9;
+  margin-bottom: 50px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .contact-info p {
@@ -23,19 +32,24 @@
 }
 
 .contact-methods {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .contact-method {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 20px;
-  padding: 20px;
+  text-align: center;
+  gap: 15px;
+  padding: 30px 20px;
   border-radius: 15px;
   text-decoration: none;
   transition: all 0.3s;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .contact-method:hover {
