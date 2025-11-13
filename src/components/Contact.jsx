@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { useInView } from 'framer-motion'
 import emailjs from '@emailjs/browser'
 import './Contact.css'
@@ -12,28 +12,27 @@ const Contact = () => {
   const [loading, setLoading] = useState(false)
   const [status, setStatus] = useState({ type: '', message: '' })
 
+  // Initialize EmailJS
+  useEffect(() => {
+    emailjs.init('GUdXpF8CslTIT55RX')
+  }, [])
+
   const handleSubmit = async (e) => {
     e.preventDefault()
     setLoading(true)
     setStatus({ type: '', message: '' })
 
     try {
-      // EmailJS Configuration
-      const serviceId = 'service_027xnfi'
-      const templateId = 'template_rn9k5yd'
-      const publicKey = 'GUdXpF8CslTIT55RX'
-
       // Send email using EmailJS
       await emailjs.send(
-        serviceId,
-        templateId,
+        'service_027xnfi',
+        'template_rn9k5yd',
         {
           from_name: formData.name,
           from_email: formData.email,
           message: formData.message,
-          to_email: 'shehroozking3@gmail.com'
-        },
-        publicKey
+          to_name: 'Shehrooz'
+        }
       )
       
       setStatus({ 
