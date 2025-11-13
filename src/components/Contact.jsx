@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { useState, useRef } from 'react'
 import { useInView } from 'framer-motion'
+import emailjs from '@emailjs/browser'
 import './Contact.css'
 
 const Contact = () => {
@@ -17,24 +18,34 @@ const Contact = () => {
     setStatus({ type: '', message: '' })
 
     try {
-      // Simple mailto fallback - works everywhere
-      const mailtoLink = `mailto:shehroozking3@gmail.com?subject=Portfolio Contact from ${encodeURIComponent(formData.name)}&body=${encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`)}`
-      
-      window.location.href = mailtoLink
+      // EmailJS Configuration
+      const serviceId = 'service_027xnfi'
+      const templateId = 'template_rn9k5yd'
+      const publicKey = 'GUdXpF8CslTIT55RX'
+
+      // Send email using EmailJS
+      await emailjs.send(
+        serviceId,
+        templateId,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+          to_email: 'shehroozking3@gmail.com'
+        },
+        publicKey
+      )
       
       setStatus({ 
         type: 'success', 
-        message: 'Opening your email client. Please send the message from there.' 
+        message: 'Message sent successfully! I will get back to you soon.' 
       })
-      
-      // Clear form after 2 seconds
-      setTimeout(() => {
-        setFormData({ name: '', email: '', message: '' })
-      }, 2000)
+      setFormData({ name: '', email: '', message: '' })
     } catch (error) {
+      console.error('EmailJS Error:', error)
       setStatus({ 
         type: 'error', 
-        message: 'Failed to open email client. Please email directly: shehroozking3@gmail.com' 
+        message: 'Failed to send message. Please email directly: shehroozking3@gmail.com' 
       })
     } finally {
       setLoading(false)
