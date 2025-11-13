@@ -14,7 +14,7 @@ const Contact = () => {
 
   // Initialize EmailJS
   useEffect(() => {
-    emailjs.init('GUdXpF8CslTIT55RX')
+    emailjs.init('GUdXpF8CsITIT55RX')
   }, [])
 
   const handleSubmit = async (e) => {
