@@ -29,7 +29,7 @@ const About = () => {
             whileHover={{ scale: 1.05, rotateY: 5 }}
           >
             <div className="image-wrapper">
-              <img src="/profile.jpg" alt="Shehrooz Hafeez" />
+              <img src={`${import.meta.env.BASE_URL}profile.jpg`} alt="Shehrooz Hafeez" />
               <div className="image-glow"></div>
             </div>
           </motion.div>

@@ -11,7 +11,7 @@ const projectsData = [
     category: 'Web',
     tags: ['React', 'Node.js', 'MongoDB', 'Express', 'Socket.io'],
     link: '/saas-landing.html',
-    image: '/project-1.jpg',
+    image: `${import.meta.env.BASE_URL}project-1.jpg`,
     bgPosition: 'center top'
   },
   {
@@ -21,7 +21,7 @@ const projectsData = [
     category: 'Web',
     tags: ['React', 'TypeScript', 'PostgreSQL', 'Stripe', 'AWS'],
     link: '/divi-index.html',
-    image: '/project-2.jpg',
+    image: `${import.meta.env.BASE_URL}project-2.jpg`,
     bgPosition: 'center top'
   },
   {
@@ -31,7 +31,7 @@ const projectsData = [
     category: 'Web',
     tags: ['Next.js', 'Python', 'Redis', 'PayPal', 'Docker'],
     link: '/index.html',
-    image: '/screenshot-3.png',
+    image: `${import.meta.env.BASE_URL}screenshot-3.png`,
     bgPosition: 'left center'
   }
 ]
