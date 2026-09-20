@@ -29,7 +29,7 @@ const About = () => {
             whileHover={{ scale: 1.05, rotateY: 5 }}
           >
             <div className="image-wrapper">
-              <img src={`${import.meta.env.BASE_URL}profile.jpg`} alt="Shehrooz Hafeez" />
+              <img src={`${import.meta.env.BASE_URL}profile-professional.jpg`} alt="Shehrooz Hafeez" />
               <div className="image-glow"></div>
             </div>
           </motion.div>
@@ -40,8 +40,9 @@ const About = () => {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <p>I'm a Full-Stack Web Developer with a passion for creating exceptional digital experiences. I specialize in building modern, scalable applications using cutting-edge technologies.</p>
-            <p>Whether you need a stunning landing page, a complex e-commerce platform, or custom AI integration, I bring technical expertise and creative problem-solving to every project.</p>
+            <p>I'm a Computer Science student at COMSATS University Islamabad and a Full-Stack Developer with 2+ years of hands-on experience building production-grade web applications. I specialize in React, Next.js, Node.js, and MongoDB, delivering live systems that serve thousands of users.</p>
+            <p>My work ranges from institutional platforms with secure authentication and admin dashboards to modern e-commerce solutions and AI-powered features. I've built the CFA Pakistan Member Directory (3,000+ members), NightXlace E-Commerce Platform, and Hotelogix Hotel Management System - all deployed and serving real users.</p>
+            <p>From responsive frontends to scalable backends, I turn requirements into deployed, maintainable applications using modern tech stacks including REST APIs, JWT authentication, Prisma ORM, and cloud deployment on Vercel with MongoDB Atlas. I'm passionate about writing clean, efficient code and solving complex technical challenges.</p>
 
             <div className="tech-icons">
               {['⚛️', '📱', '🚀', '🤖', '💻', '🎨'].map((icon, index) => (

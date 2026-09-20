@@ -96,8 +96,10 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6 }}
           >
-            I build scalable websites and applications that solve real business problems. 
-            From stunning landing pages to complex e-commerce platforms, I deliver clean code and exceptional results.
+            Computer Science student at COMSATS University Islamabad with 2+ years of experience 
+            building production-grade web applications. I specialize in full-stack development with 
+            React, Next.js, Node.js, and MongoDB, delivering scalable solutions from institutional 
+            platforms managing 3,000+ users to modern e-commerce systems and AI-powered applications.
           </motion.p>
           
           <motion.div 
@@ -131,9 +133,9 @@ const Hero = () => {
             transition={{ delay: 1 }}
           >
             {[
-              { number: '50+', label: 'Projects' },
-              { number: '30+', label: 'Clients' },
-              { number: '5★', label: 'Rating' }
+              { number: '10+', label: 'Projects' },
+              { number: '3,000+', label: 'Users' },
+              { number: '2+', label: 'Years Exp' }
             ].map((stat, index) => (
               <motion.div 
                 key={index}

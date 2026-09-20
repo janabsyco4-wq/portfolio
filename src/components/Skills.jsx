@@ -5,11 +5,17 @@ import './Skills.css'
 
 const skillsData = [
   { name: 'React.js', level: 95, icon: '⚛️' },
-  { name: 'Node.js', level: 90, icon: '🟢' },
-  { name: 'Python', level: 88, icon: '🐍' },
   { name: 'Next.js', level: 92, icon: '▲' },
-  { name: 'AI/ML', level: 85, icon: '🤖' },
-  { name: 'MongoDB', level: 87, icon: '🍃' }
+  { name: 'Node.js', level: 90, icon: '🟢' },
+  { name: 'JavaScript', level: 93, icon: '💛' },
+  { name: 'TypeScript', level: 85, icon: '💙' },
+  { name: 'Python', level: 88, icon: '🐍' },
+  { name: 'MongoDB', level: 87, icon: '🍃' },
+  { name: 'Express.js', level: 89, icon: '🚂' },
+  { name: 'Tailwind CSS', level: 94, icon: '🎨' },
+  { name: 'REST APIs', level: 91, icon: '🔌' },
+  { name: 'JWT Auth', level: 88, icon: '🔐' },
+  { name: 'Git & GitHub', level: 90, icon: '📦' }
 ]
 
 const Skills = () => {

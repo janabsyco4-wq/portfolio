@@ -23,14 +23,17 @@ const Footer = () => {
               <span className="logo-bracket-footer">{'>'}</span>
             </motion.div>
             <h3 className="footer-name">Shehrooz Hafeez</h3>
-            <p>Full Stack Developer specializing in modern web applications</p>
+            <p>Computer Science Student & Full Stack Developer</p>
+            <p style={{ fontSize: '0.9rem', marginTop: '0.5rem', color: '#888' }}>
+              shehroozhafeezpriv@gmail.com | +92 310 4594964
+            </p>
           </div>
 
           <div className="footer-social">
             {[
-              { icon: '📧', link: 'mailto:shehroozking3@gmail.com' },
-              { icon: '💼', link: 'https://www.fiverr.com/s/DBNNYlN' },
-              { icon: '💻', link: 'https://github.com/janabsyco4-wq' }
+              { icon: '📧', link: 'mailto:shehroozhafeezpriv@gmail.com', label: 'Email' },
+              { icon: '📱', link: 'tel:+923104594964', label: 'Phone' },
+              { icon: '💻', link: 'https://github.com/janabsyco4-wq', label: 'GitHub' }
             ].map((social, index) => (
               <motion.a
                 key={index}
@@ -40,6 +43,7 @@ const Footer = () => {
                 className="social-icon glass"
                 whileHover={{ scale: 1.2, rotate: 360 }}
                 transition={{ duration: 0.5 }}
+                title={social.label}
               >
                 {social.icon}
               </motion.a>

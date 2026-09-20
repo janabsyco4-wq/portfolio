@@ -33,8 +33,8 @@ const Contact = () => {
           
           <div className="contact-methods">
             {[
-              { icon: '📧', label: 'Email', value: 'shehroozking3@gmail.com', link: 'mailto:shehroozking3@gmail.com' },
-              { icon: '💼', label: 'Fiverr', value: 'View Profile', link: 'https://www.fiverr.com/s/DBNNYlN' },
+              { icon: '📧', label: 'Email', value: 'shehroozhafeezpriv@gmail.com', link: 'mailto:shehroozhafeezpriv@gmail.com' },
+              { icon: '📱', label: 'Contact', value: '+92 310 4594964', link: 'tel:+923104594964' },
               { icon: '💻', label: 'GitHub', value: '@janabsyco4-wq', link: 'https://github.com/janabsyco4-wq' }
             ].map((method, index) => (
               <motion.a
