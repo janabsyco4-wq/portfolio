@@ -42,6 +42,18 @@ const projectsData = [
   },
   {
     id: 4,
+    title: 'Portfolio - Interactive 3D Experience',
+    description: '3D animated portfolio website featuring interactive elements, smooth transitions, and modern design. Built with React Three Fiber for immersive user experience and stunning visual effects',
+    category: 'Web',
+    tags: ['React', 'Three.js', 'Framer Motion', 'Vite', 'Vercel'],
+    link: 'https://portolio-project.vercel.app/',
+    liveUrl: 'https://portolio-project.vercel.app/',
+    bgPosition: 'center top',
+    isLive: true,
+    showIframe: true
+  },
+  {
+    id: 5,
     title: 'GENIX - AI SaaS Platform',
     description: 'Revolutionary AI-powered platform combining GPT-4, DALL-E, and advanced algorithms to transform creative workflows. Features include intelligent content generation, image synthesis, and automated optimization.',
     category: 'AI/ML',
@@ -52,7 +64,7 @@ const projectsData = [
     isLive: false
   },
   {
-    id: 5,
+    id: 6,
     title: 'NEXUS - Social Network',
     description: 'Next-generation social networking platform with real-time messaging, content sharing, and AI-powered recommendations. Built with modern web technologies for seamless user experience.',
     category: 'Web',
@@ -63,7 +75,7 @@ const projectsData = [
     isLive: false
   },
   {
-    id: 6,
+    id: 7,
     title: 'SHOPAI - E-Commerce Analytics',
     description: 'Intelligent e-commerce analytics dashboard providing real-time insights, predictive modeling, and automated reporting. Helps businesses make data-driven decisions.',
     category: 'Analytics',
