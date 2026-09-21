@@ -54,6 +54,42 @@ const projectsData = [
   },
   {
     id: 5,
+    title: "Glen's Mobile Auto - Landing Page",
+    description: 'Modern landing page for mobile automotive services with responsive design, call-to-action sections, and professional service showcase. Clean UI with optimized performance.',
+    category: 'Web',
+    tags: ['HTML', 'CSS', 'JavaScript', 'Responsive', 'Vercel'],
+    link: 'https://glens-mobile-auto12.vercel.app/',
+    liveUrl: 'https://glens-mobile-auto12.vercel.app/',
+    bgPosition: 'center top',
+    isLive: true,
+    showIframe: true
+  },
+  {
+    id: 6,
+    title: 'Houston Mobile Mechanic - Landing Page',
+    description: 'Professional landing page for Houston-based mobile mechanic services featuring service showcase, contact integration, and responsive design optimized for mobile and desktop.',
+    category: 'Web',
+    tags: ['HTML', 'CSS', 'JavaScript', 'Responsive', 'Vercel'],
+    link: 'https://houston-mobile-mechanic-git-main-shehrooz-hafeezs-projects.vercel.app/',
+    liveUrl: 'https://houston-mobile-mechanic-git-main-shehrooz-hafeezs-projects.vercel.app/',
+    bgPosition: 'center top',
+    isLive: true,
+    showIframe: true
+  },
+  {
+    id: 7,
+    title: 'Etsy Automation - AI-Powered Listing Creator',
+    description: 'Complete automation workflow for Etsy sellers using Google Gemini AI for SEO optimization. Automatically creates listings with Google Sheets logging and email notifications. Reduces listing creation time from 30+ minutes to under 2 minutes.',
+    category: 'AI/ML',
+    tags: ['Node.js', 'Google Gemini', 'Etsy API', 'Google Sheets', 'Vercel'],
+    link: 'https://github.com/janabsyco4-wq/etsy-g',
+    githubLink: 'https://github.com/janabsyco4-wq/etsy-g',
+    bgPosition: 'center',
+    isLive: false,
+    showGithub: true
+  },
+  {
+    id: 8,
     title: 'GENIX - AI SaaS Platform',
     description: 'Revolutionary AI-powered platform combining GPT-4, DALL-E, and advanced algorithms to transform creative workflows. Features include intelligent content generation, image synthesis, and automated optimization.',
     category: 'AI/ML',
@@ -64,7 +100,7 @@ const projectsData = [
     isLive: false
   },
   {
-    id: 6,
+    id: 9,
     title: 'NEXUS - Social Network',
     description: 'Next-generation social networking platform with real-time messaging, content sharing, and AI-powered recommendations. Built with modern web technologies for seamless user experience.',
     category: 'Web',
@@ -75,7 +111,7 @@ const projectsData = [
     isLive: false
   },
   {
-    id: 7,
+    id: 10,
     title: 'SHOPAI - E-Commerce Analytics',
     description: 'Intelligent e-commerce analytics dashboard providing real-time insights, predictive modeling, and automated reporting. Helps businesses make data-driven decisions.',
     category: 'Analytics',
@@ -137,6 +173,22 @@ const Projects = () => {
                       pointerEvents: 'none'
                     }}
                   />
+                ) : project.showGithub ? (
+                  <div 
+                    style={{ 
+                      width: '100%',
+                      height: '100%',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      background: 'linear-gradient(135deg, #24292e 0%, #1a1d21 100%)',
+                      position: 'relative'
+                    }}
+                  >
+                    <svg height="120" width="120" viewBox="0 0 16 16" fill="white" style={{ opacity: 0.9 }}>
+                      <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+                    </svg>
+                  </div>
                 ) : (
                   <div 
                     style={{ 
@@ -156,7 +208,7 @@ const Projects = () => {
                     className="view-btn"
                     whileHover={{ scale: 1.05 }}
                   >
-                    {project.isLive ? 'View Live' : 'View Details'}
+                    {project.showGithub ? 'View on GitHub' : (project.isLive ? 'View Live' : 'View Details')}
                   </motion.a>
                 </div>
               </div>

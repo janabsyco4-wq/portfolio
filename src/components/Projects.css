@@ -90,6 +90,24 @@
   box-shadow: 0 0 20px rgba(0, 85, 255, 0.8);
 }
 
+.github-btn {
+  padding: 12px 24px;
+  background: #24292e;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s;
+  display: inline-flex;
+  align-items: center;
+}
+
+.github-btn:hover {
+  background: #0055FF;
+  color: white;
+  box-shadow: 0 0 20px rgba(0, 85, 255, 0.8);
+}
+
 .project-info {
   padding: 30px;
 }
